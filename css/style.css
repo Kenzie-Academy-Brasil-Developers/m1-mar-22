@@ -1,0 +1,74 @@
+body, section, article, main, aside,footer, img, nav, ul, li,a, h1,h2, h3, div,p, figure, figcaption{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+body{
+    color: red;
+   
+}
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.cabecalho{
+    display: flex;
+    padding: 30px;
+}
+.cabecalho .col{
+    width: 100%;
+}
+.cabecalho .col.left{
+    width: 30%;
+}
+
+.cabecalho img{}
+.cabecalho nav{}
+.cabecalho nav ul{
+    padding-top: 20px;
+
+}
+.cabecalho ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.cabecalho ul a{
+    color: #2D2D2D;
+}
+.cabecalho ul a:hover{
+    color: #0000FF;
+}
+
+article h1{
+    color: #0000FF;
+    font-size: 36px;
+}
+article h2{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2D2D2D;
+}
+
+article figure{
+    margin-bottom: 112px;
+}
+article img{
+    width: 100%;
+}
+
+
+
+
+
+
