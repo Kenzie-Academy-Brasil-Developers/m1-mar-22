@@ -5,69 +5,142 @@ body, section, article, main, aside,footer, img, nav, ul, li,a, h1,h2, h3, div,p
     font-size: 100%;
     text-decoration: none;
     box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 16px;
 }
 
 ol, ul {
 	list-style: none;
 }
 
-body{
-    color: red;
+/* ESTILOS GERAIS */
+    body{
+
+    
+    }
+    .container{
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+/* CABEÇALHO */
+    .cabecalho{
+        display: flex;
+        padding: 30px;
+    }
+    .cabecalho .col{
+        width: 100%;
+    }
+    .cabecalho .col.left{
+        width: 30%;
+    }
+    .cabecalho img{}
+    .cabecalho nav{}
+    .cabecalho nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 540px;
+        height: 60px;
+    }
+    .cabecalho ul li{}
+    .cabecalho ul a{
+        color: #2D2D2D;
+    }
+    .cabecalho ul a:hover{
+        color: #0000FF;
+    }
+    article{
+        margin-top: 100px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    article section{
+        max-width: 648px;
+        margin: 0 auto;
+    }
+    
+    article h1{
+        color: #0000FF;
+        font-size: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-family: 'JetBrains Mono';
+    }
+    article h2{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #2D2D2D;
+    }
+
+    article figure{
+        margin: 112px 0 20px;
+    }
+    article img{
+        width: 100%;
+    }
+    article h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    article p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+
+    article strong{
+        color:#0000FF;
+    }
+
+
+    aside{
+        background-color: #0404FF;
+        height: 239px;
+    }
+    aside ul{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        margin: 330px auto 0;
+        transform: translateY(-200px);
+    }
+    aside ul li{
+        width: 100%;
+        max-width: 350px;
+        height: 321px;
+        border-radius: 16px;
+        background-color: #F5F5F5;
+    }
+    aside ul li a{}
+    aside ul li img{}
+    aside ul li h3{
+        padding:39px 30px 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #2D2D2D;
+    }
+    aside ul li p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #2D2D2D;
+        padding: 0 30px;
+    }
    
-}
-.container{
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-}
-
-.cabecalho{
-    display: flex;
-    padding: 30px;
-}
-.cabecalho .col{
-    width: 100%;
-}
-.cabecalho .col.left{
-    width: 30%;
-}
-
-.cabecalho img{}
-.cabecalho nav{}
-.cabecalho nav ul{
-    padding-top: 20px;
-
-}
-.cabecalho ul li{
-    display: inline-block;
-    margin: 0 10px;
-}
-.cabecalho ul a{
-    color: #2D2D2D;
-}
-.cabecalho ul a:hover{
-    color: #0000FF;
-}
-
-article h1{
-    color: #0000FF;
-    font-size: 36px;
-}
-article h2{
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    color: #2D2D2D;
-}
-
-article figure{
-    margin-bottom: 112px;
-}
-article img{
-    width: 100%;
-}
-
-
 
 
 
