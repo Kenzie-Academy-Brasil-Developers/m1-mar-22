@@ -110,3 +110,53 @@ let falso      = false
 
 // }
 
+
+
+
+// function soma(num1, num2){
+
+//     return num1 + num2
+// }
+
+
+// function calculadora(operacao, numero1, numero2){
+    
+//     //VERIFICAR O TIPO DE OPERAÇÃO 
+//     if(operacao == "+"){
+
+//         //soma(10,10)
+//         return soma(numero1, numero2)
+//     }
+
+// }
+
+// let resultado  = calculadora("+", 10, 10)
+// console.log(resultado)
+
+
+// function nomeCompleto(nome, sobrenome){
+
+//     return `Meu nome é ${nome} ${sobrenome}`
+    
+// }
+
+// let nome = nomeCompleto("Hudson", "Carolino")
+// console.log(nome)
+
+// function parOuImpar(numero){
+//     let resultado  = ""
+//     if(numero % 2 == 0){
+//         return resultado =   "Par"
+//     }
+
+//     return  resultado =   "Impar" 
+// }
+
+// let resultado  = parOuImpar(10)
+// console.log(resultado)
+
+
+ 
+
+
+
