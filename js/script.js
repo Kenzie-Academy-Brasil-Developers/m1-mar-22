@@ -157,6 +157,97 @@ let falso      = false
 
 
  
+const idade = 10
+
+//const array = ["Hudson", "Daniel", "Jardel", "Bruno"]
+
+//MOSTRANDO 
+//console.log(array)
+
+//TAMANHO DO MEU ARRAY
+//console.log(array.length)
+
+//ACESSANDO INFORMAÇÃO
+//array[2] = "Gabriel"
+
+//ATRIBUIR MAIS DADOS PARA O ARRAY
+//array.push("Andre")
+
+//LISTAR NOMES
 
 
 
+
+
+// function teste(){
+//     let i = 4 
+    
+//     while(i <= 10){
+        
+        
+//             return i
+        
+        
+        
+    
+        
+//         i++
+//     } 
+// }
+
+
+//
+// for(let i = 0; i <= 10; i++){
+    
+//     console.log(i)
+
+// }
+
+
+const array = ["Hudson", "Daniel", "Jardel", "Anderson", "Andre", "Gabriel"]
+
+function listarNomesArray(listaNomes){
+ 
+   for(let i = 0; i < listaNomes.length; i++ ){
+
+        if(listaNomes[i] == "Anderson"){
+
+          console.log(`Encontrei o ${listaNomes[i]}`)  
+            
+        }
+
+   }
+   console.log(listaNomes)
+}
+//listarNomesArray(array)
+
+
+
+
+
+const notasAluno1 = [40,60,80,60,30,80]
+console.log(notasAluno1)
+//PERCORRER NOTA A NOTA 
+// SOMAR AS NOTAS 
+// DIVIDIR O RESULTADO DA SOMA, PELA QUANTIDADE 
+// VERIFICAR SE O ALUNO FOI APROVADO
+
+function calculaMedia(notas){
+
+    let soma  = 0 
+    let media = 0
+
+    for(let i  = 0; i < notas.length; i++){
+        soma += notas[i]
+    }
+
+    media = soma / notas.length
+    
+    if(media >= 80){
+        return "Aprovado"
+    }
+    
+    return "Não aprovado"
+    
+}
+calculaMedia(notasAluno1)
