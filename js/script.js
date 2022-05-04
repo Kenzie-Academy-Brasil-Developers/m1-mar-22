@@ -1,127 +1,108 @@
-const arrayNomes = ["Hudson", "Rodrigo", "Tiago", "André", "Igor"]
+//ARRAY X OBJETOS
 
 
-//LISTANDO OS NOMES NO ARRAY
-for(let i = 0; i<arrayNomes.length; i++){
+const aluno = {
+    nome:"Hudson",
+    idade: 12,
+    ativo:true,
+    telefone:"41997117234",
+    email:"hudson@gmail.com",
+    endereco:"Rua curitiba",
+    curso: "Front-end",
+    modulos: ["M1","M2","M3","M4"]
+}
 
+//ARRAY COM TODAS AS PROPRIEDADES
+const propriedades = Object.values(aluno)
+//console.log(propriedades)
+
+//console.log(propriedades)
+
+// for(let i = 0; i<propriedades.length; i++){
+//     console.log(propriedades[i])
+// }
+
+
+// for(let atributo in obejto){
+
+
+// }
+
+
+// const arrayProdutos  = [
+  
+//     {
+//         nome: "Celular da JBL",
+//         preco:300.50,
+//         marca:"JBL",
+//         cor:"Azul",
+//         categorias:["Eletronicos", "Smartphone", "Categoria exemplo 2"]
+//     },
+//     {
+//         nome: "Teclado JBL",
+//         preco:1000,
+//         marca:"JBL",
+//         cor:"Branco",
+//         categorias:["Eletronicos", "Smartphone"]
+//     }
+// ]
+
+// for(let i = 0; i<arrayProdutos.length; i++){
+
+//     let produtoAtual = arrayProdutos[i]
+
+//     console.log("Nome Produto: "+produtoAtual.nome)
+//     console.log( "Preço: "+produtoAtual.preco)
+//     console.log( "Marca: "+produtoAtual.marca)
+//     console.log( "Cor: "+produtoAtual.cor)
+    
+    
+
+//    // console.log("---------")
+    
+
+
+// }
+
+
+// const produto = {
+//     id: 0,
+//     sku:120,
+//     nome: "Fone JBL",
+//     preco:120.50,
+//     marca:"JBL",
+//     cor:"Preto",
+//     categorias:["Eletronicos", "Smartphone", "Categoria exemplo 1"]
+// }
         
-    listarNome(arrayNomes[i])
-
-}
-
-//FORMATANDO MOSTRANDO NO CONSOLE
-function listarNome(nome){
-
-    //console.log(`Facilitador: ${nome}`)
-
-}
-
-
-//MÉTODO => FOREACH
-arrayNomes.forEach(function(nome, i){
-
-    // console.log(i)
-    // console.log(`Facilitador: ${nome}`)
-
-})
-
-//*************************** */
-//*************************** */
-
-//retornar um novo array com os nomes "Facilitador - Nome"
-const arrayNomes2 = ["Hudson", "Rodrigo", "Tiago", "André", "Igor", "Anderson"]
-
-
-function tratarNomes(arrayNomes){
-
-    let novoArrayNomes = []
-
-    for(let i = 0; i< arrayNomes.length; i++){
-
-
-        let facilitador = `Facilitador - ${arrayNomes[i]}`
-
-        novoArrayNomes.push(facilitador)
-    
-    }
-
-    console.log(novoArrayNomes)
-}
-
-//tratarNomes(arrayNomes2)
-
-//array                                        //valor da função callback
-// const novoArrayNomesTratados = arrayNomes2.map(function(nome){
-    
-//    return `Facilitador - ${nome}`
-
-// })
-
-// console.log(novoArrayNomesTratados)
-
-
-
-//*************************** */
-//MAP
-//*************************** */
-
-const arrayNumeros = [1,2,3,4,5,6,7]
-
-const novoArrayMultiplicado  = arrayNumeros.map(function(numero){
-
-    if(numero > 2){
-        return numero
-    }
-     
-
-})
-
-//console.log(novoArrayMultiplicado)
-
-
-//*************************** */
-//FILTER
-//*************************** */
-const arrayNumeros2 = [1,2,3,4,5,6,7,4,-1,2,-4,10,11,90,-1,-7]
-
-const numerosNevatios = arrayNumeros2.filter(function(numero){
+// for(let propriedade in produto){
 
    
-        return numero < 0
-   
+//     console.log(produto[propriedade])
 
-})
-
-//console.log(arrayNumeros2)
-console.log(numerosNevatios)
+//     // if(propriedade == "categorias"){
+//     //     console.log(propriedade)
 
 
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+//     //     // const listaCategorias  = produto[propriedade]
 
-const result = words.filter( function(word){
+//     //     // for(let i  = 0; i< listaCategorias.length; i++){
+         
+//     //     //     console.log(listaCategorias[i])
 
-    return word.length > 6
+//     //     // }
+//     // }
 
-
-});
-
-//console.log(result);
+// }
 
 
 
 
-// words.forEach(function(palavra, i){
-
-//     console.log(i*2)
 
 
 
-// })
 
-// const resultado  = [1,2,3,4,5,6,7].reduce(function(contator, numero){
-     
-//     return contator + numero
 
-// }, 0)
+
 
 
