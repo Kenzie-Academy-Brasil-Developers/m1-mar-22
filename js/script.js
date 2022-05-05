@@ -1,108 +1,78 @@
-//ARRAY X OBJETOS
+//UNIDIMINSIONAL
+let array = [1,2,3,4,5]
+
+//BIDIMENSIONAL 
+let array2 = [
+    [],[],[],
+    [],[],[]
+]
+
+//MULTIDIMENSIONAL
+
+let array3 = [
+    [[],[]],[[],[]],[[],[]],
+    [[],[]],[[],[]],[[],[]]
+]
+
+//
+
+const arrayNotas = [
+    [60,80,80,40],// ALUNO   0
+    [76,75,74,80], // ALUNO  1
+    [40,85,80,100], // ALUNO 2
+    [60,80,80,40], // ALUNO  3
+    [10,10,10,10], // ALUNO  4
+    
+]
 
 
-const aluno = {
-    nome:"Hudson",
-    idade: 12,
-    ativo:true,
-    telefone:"41997117234",
-    email:"hudson@gmail.com",
-    endereco:"Rua curitiba",
-    curso: "Front-end",
-    modulos: ["M1","M2","M3","M4"]
+
+
+
+
+// arrayNotas.push([10,30,40,20])
+
+// console.table(arrayNotas)
+
+const medias = []
+
+for(let i = 0; i < arrayNotas.length; i++){
+    console.log(`------- Aluno ${i} ------- ` )
+    arrayNotas[i].push(100)
+    console.log(arrayNotas[i])
+
+    let somaNotas = 0
+    for(let j = 0; j < arrayNotas[i].length; j++){
+        
+        somaNotas += arrayNotas[i][j]
+    }
+
+    medias.push(somaNotas)
+    console.log(somaNotas / arrayNotas[i].length)
 }
 
-//ARRAY COM TODAS AS PROPRIEDADES
-const propriedades = Object.values(aluno)
-//console.log(propriedades)
-
-//console.log(propriedades)
-
-// for(let i = 0; i<propriedades.length; i++){
-//     console.log(propriedades[i])
-// }
 
 
-// for(let atributo in obejto){
+// arrayNotas.forEach(function(arrayNotas){
 
+//     arrayNotas.forEach(function(notas){
 
-// }
-
-
-// const arrayProdutos  = [
-  
-//     {
-//         nome: "Celular da JBL",
-//         preco:300.50,
-//         marca:"JBL",
-//         cor:"Azul",
-//         categorias:["Eletronicos", "Smartphone", "Categoria exemplo 2"]
-//     },
-//     {
-//         nome: "Teclado JBL",
-//         preco:1000,
-//         marca:"JBL",
-//         cor:"Branco",
-//         categorias:["Eletronicos", "Smartphone"]
-//     }
-// ]
-
-// for(let i = 0; i<arrayProdutos.length; i++){
-
-//     let produtoAtual = arrayProdutos[i]
-
-//     console.log("Nome Produto: "+produtoAtual.nome)
-//     console.log( "Preço: "+produtoAtual.preco)
-//     console.log( "Marca: "+produtoAtual.marca)
-//     console.log( "Cor: "+produtoAtual.cor)
     
-    
+//     })
 
-//    // console.log("---------")
-    
-
-
-// }
-
-
-// const produto = {
-//     id: 0,
-//     sku:120,
-//     nome: "Fone JBL",
-//     preco:120.50,
-//     marca:"JBL",
-//     cor:"Preto",
-//     categorias:["Eletronicos", "Smartphone", "Categoria exemplo 1"]
-// }
-        
-// for(let propriedade in produto){
-
-   
-//     console.log(produto[propriedade])
-
-//     // if(propriedade == "categorias"){
-//     //     console.log(propriedade)
-
-
-//     //     // const listaCategorias  = produto[propriedade]
-
-//     //     // for(let i  = 0; i< listaCategorias.length; i++){
-         
-//     //     //     console.log(listaCategorias[i])
-
-//     //     // }
-//     // }
-
-// }
+// })
 
 
 
 
+const pessoa = {
+    nome:"Hudson",
+    sobrenome:"Carolino",
 
+    apresentar (){
 
+        console.log(`Meu nome é ${pessoa.nome} ${pessoa.sobrenome}`)
 
+    }
 
-
-
-
-
+}
