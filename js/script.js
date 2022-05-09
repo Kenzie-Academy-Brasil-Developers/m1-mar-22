@@ -1,19 +1,45 @@
-let body = document.querySelector("body")
+let titulo = document.getElementById("titulo")
+
+titulo.style.background = "red"
+
+
+// let img = document.getElementsByTagName("img")
+
+//let img = document.querySelector("img")
+//let lis = document.querySelectorAll("li")
 
 
 
+// tituloPrincipal.id
+// tituloPrincipal.className
+// tituloPrincipal.innerText = "Hudson"
+// tituloPrincipal.innerHTML = "<em>Funcionarios</em>"
 
-//console.log(body)
+//tituloPrincipal.classList.add("tituloClass")
+//console.log(tituloPrincipal)
 
 
+//LI
+let listaFuncionarios = document.querySelector(".listaFuncionarios")
 
-for(let i = 0; i < 10; i++){
-    
-    let p = document.createElement("p")
+function listarFuncionario(){
+    let li = document.createElement("li")
+    let figure = document.createElement("figure")
+    let img = document.createElement("img")
+    let h2 = document.createElement("h2")
 
-    p.innerText = ` Hudson: ${i}`
-    
-    body.appendChild(p)
 
+    img.src = "./img.jpg"
+    h2.innerText = "Hudson"
+
+    figure.appendChild(img)
+    li.appendChild(figure)
+    li.appendChild(h2)
+
+
+    listaFuncionarios.appendChild(li)
 }
+listarFuncionario()
+
+
 
