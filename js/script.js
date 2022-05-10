@@ -1,45 +1,76 @@
-let titulo = document.getElementById("titulo")
+const listaClientes = document.querySelector(".listaClientes")
 
-titulo.style.background = "red"
+//LISTANDO FUNCIONARIOS DA BASE 
+function listarFuncionarios(listaFuncionario){
+    
 
+    //PERCORRENDO ARRAY DE FUNCIONARIOS
+    for(let i = 0; i<listaFuncionario.length; i++){
+        
+        //ACESSANDO CADA FUNCIONARIO 
+        const funcionario = listaFuncionario[i]
 
-// let img = document.getElementsByTagName("img")
+        //CRIANDO CARD (RETURN => LI)
+        const cardFuncionario = criarCardFuncionario(funcionario)
+        listaClientes.appendChild(cardFuncionario)
 
-//let img = document.querySelector("img")
-//let lis = document.querySelectorAll("li")
-
-
-
-// tituloPrincipal.id
-// tituloPrincipal.className
-// tituloPrincipal.innerText = "Hudson"
-// tituloPrincipal.innerHTML = "<em>Funcionarios</em>"
-
-//tituloPrincipal.classList.add("tituloClass")
-//console.log(tituloPrincipal)
-
-
-//LI
-let listaFuncionarios = document.querySelector(".listaFuncionarios")
-
-function listarFuncionario(){
-    let li = document.createElement("li")
-    let figure = document.createElement("figure")
-    let img = document.createElement("img")
-    let h2 = document.createElement("h2")
-
-
-    img.src = "./img.jpg"
-    h2.innerText = "Hudson"
-
-    figure.appendChild(img)
-    li.appendChild(figure)
-    li.appendChild(h2)
-
-
-    listaFuncionarios.appendChild(li)
+    }
 }
-listarFuncionario()
+listarFuncionarios(data_base)
+
+
+//1 FUNÇÃO PARA CRIAR CARD FUNCIONARIO
+function criarCardFuncionario(funcionario){
+
+    //1)RECUPERANDO INFORMAÇÕES DO FUNCIONARIO
+    const nome      = funcionario.nome
+    const cargo     = funcionario.cargo
+    const empresa   = funcionario.empresa
+    const image     = funcionario.image
+    const modulo    = funcionario.modulo
+    const ativo     = funcionario.ativo
+
+    //2) CRIANDO ELEMENTOS => CARD FUNCIONÁRIO 
+    const  tagLi        = document.createElement("li")
+    const  tagFigure    = document.createElement("figure")
+    const  tagImg       = document.createElement("img")
+    const  tagDiv       = document.createElement("div")
+    const  tagNome      = document.createElement("p")
+    const  tagCargo     = document.createElement("p")
+    const  tagEmpresa   = document.createElement("p")
+
+    //3) ADICIONAR INFORMAÇÕES NAS TAGS CRIADAS
+    tagImg.src           = `./img/${image}`
+    tagImg.alt           = nome
+    tagNome.innerHTML    = `<strong>Nome:</strong> ${nome}`
+    tagCargo.innerHTML   = `<strong>Cargo:</strong> ${cargo}`
+    tagEmpresa.innerHTML = `<strong>Empresa:</strong> ${empresa}`
+
+    //4) MONTAR O TEMPLATE CARD 
+    tagFigure.appendChild(tagImg)
+    tagLi.appendChild(tagFigure)
+
+    tagDiv.classList.add("informacoes")
+    tagDiv.appendChild(tagNome)
+    tagDiv.appendChild(tagCargo)
+    tagDiv.appendChild(tagEmpresa)
+    
+    tagLi.appendChild(tagDiv)
+
+   
+    //5) RETORNAR ESSE CARD
+    return tagLi
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
