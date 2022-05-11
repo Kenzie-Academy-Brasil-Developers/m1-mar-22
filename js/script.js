@@ -1,8 +1,11 @@
+
 const listaClientes = document.querySelector(".listaClientes")
 
 //LISTANDO FUNCIONARIOS DA BASE 
 function listarFuncionarios(listaFuncionario){
-    
+
+    //LIMPANDO A LISTA, PARA LISTAR NOVAMENTE OS FUNCIONÁRIOS
+    listaClientes.innerHTML = ""
 
     //PERCORRENDO ARRAY DE FUNCIONARIOS
     for(let i = 0; i<listaFuncionario.length; i++){
@@ -40,7 +43,7 @@ function criarCardFuncionario(funcionario){
     const  tagEmpresa   = document.createElement("p")
 
     //3) ADICIONAR INFORMAÇÕES NAS TAGS CRIADAS
-    tagImg.src           = `./img/${image}`
+    tagImg.src           = image
     tagImg.alt           = nome
     tagNome.innerHTML    = `<strong>Nome:</strong> ${nome}`
     tagCargo.innerHTML   = `<strong>Cargo:</strong> ${cargo}`
@@ -63,14 +66,40 @@ function criarCardFuncionario(funcionario){
 }
 
 
+//SELECIONANDO FORMULÁRIO (FORM )
+const formulario = document.querySelector(".formulario")
 
+//INTERCEPTANDO EVENTO (SUBMIT)
+formulario.addEventListener("submit", cadastrarFuncionario)
 
+//FUNÇÃO QUE VAER CHAMADA NO EVENTO
+function cadastrarFuncionario(event){
 
+    //CONGELANDO EVENTO PADRÃO TAG FORM (SUBMIT)
+    event.preventDefault()
+    
+    //INDENTIFICANDO TAG FORM 
+    const inputs      = event.target
 
+    //RECUPERANDO CADA INPUT DE ENTRADA + O VALOR DO CAMPO
+    const nome      = inputs[0].value
+    const cargo     = inputs[1].value
+    const empresa   = inputs[2].value
+    const image     = inputs[3].value
+    
+    //CRIANDO UM NOVO OBJETO (FUNCIONARIO) ADICIONANDO INFORMAÇÕES RECEBIDA DOS CAMPOS
+    const novoFuncionario   = {}
+    novoFuncionario.modulo   = "M1"
+    novoFuncionario.status   = true
+    novoFuncionario.nome    = nome
+    novoFuncionario.cargo   = cargo
+    novoFuncionario.empresa = empresa
+    novoFuncionario.image   = image
+  
 
+    //ATUALIZANDO ARRAY DE FUNCONARIOS - ADICIONANDO O NOVO FUNCIONARIO
+    data_base.unshift(novoFuncionario)
 
-
-
-
-
-
+    //LISTANDO NOVAMENTE OS FUNCIONÁRIOS
+    listarFuncionarios(data_base)
+}

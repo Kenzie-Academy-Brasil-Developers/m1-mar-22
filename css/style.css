@@ -64,3 +64,31 @@ ul li p{
     color: #fff;
     font-size: 17px;
 }
+
+.formulario{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+.formulario label{
+    display: none;
+}
+.formulario input,button{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #1e1e1e;
+}
+.formulario button{
+    font-weight: bold;
+    text-transform: uppercase;
+    border:solid 1px #fff;
+    cursor: pointer;
+}
+
